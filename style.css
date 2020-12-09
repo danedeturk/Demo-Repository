@@ -1,0 +1,234 @@
+h1{
+    color: rgb(40, 161, 91);
+    text-align: center;
+    text-shadow: 4px 4px 10px rgb(93, 23, 150);
+}
+
+.title {
+    color: rgb(66, 187, 96);
+}
+
+#italic {
+    color: orange;
+}
+
+nav {
+    /* background-color: aqua; */
+    text-align: center;
+}
+
+.nav-wrapper {
+    background-color: rgba(109, 43, 139, 0.39);
+}
+
+.container {
+    border: 10px dashed rgb(149, 72, 201);
+    margin: 50px 5px 25px 0px;
+    padding: 30px 0px 10px 35px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    background: blue;
+    margin: 10px;
+    box-shadow: 13px 8px 10px 5px rgba(42, 26, 131, 0.904) inset;
+    }
+@keyframes fadeMe{
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#box1{
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotation {
+    0% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#box2{
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: 4s;
+    animation-timing-function: ease-in-out;
+    border-radius: 4%;
+    background-image: radial-gradient(circle, purple,orange, yellow, magenta,violet)
+}
+
+@keyframes getBigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(.5);}
+}
+
+#box3 {
+    animation: getBigger infinite 8s ease-in;
+    border-radius: 50%;
+    background-color: orange;
+}
+@keyframes changeColors{
+    0% {background-color: gray;}
+    25% {background-color: rgb(128, 128, 128);}
+    50% {background-color: rgb(102, 47, 47);}
+    75% {background-color: rgb(61, 104, 87);}
+    100% {background-color: rgb(119, 72, 115);}
+}
+
+#box4 {
+    animation: changeColors 7s 2s forwards;
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top: 0px;}
+    25% {left: 100px; top: 0px;}
+    50% {left: 100px; top: 200px;}
+    75% {left: 0px; top: 200px;}
+    0% {left: 0px; top: 0px;}
+}
+
+#box5 {
+    animation: moveBox 5s 3s;
+    background: red;
+    position: relative;
+}
+
+#box6 {
+    top: 10px;
+    left: 20px;
+    position: relative;
+}
+
+html {
+
+background: linear-gradient(90deg, rgb(178, 191, 197), rgb(114, 69, 151));
+/* background-image: linear-gradient(-45deg, rgb(175, 199, 216),rgb(36, 97, 97) ); */
+
+}
+
+    a{ 
+       text-decoration-line: none; /*this makes underlines within the unordered list words disappear*/
+    }
+
+    nav ul {
+        list-style: none; /*this makes the bullets in the unordered list disappear*/
+    } 
+    nav li {
+        display: inline-block;
+        padding: 30px;
+    }
+
+    .circle-img {
+        border-radius: 50%;
+        box-shadow: 13px 8px 10px 5px rgba(53, 21, 95, 0.904);
+
+    }
+    img {
+        box-shadow: 13px 8px 10px 5px rgba(53, 21, 95, 0.904); /* first is shadow cast from vertical axis, 2nd is horizontal, 3rd is thickness of shadow, 4th makes it bigger, inset puts the shadow inside the img element*/
+        border-radius: 0.5%;
+    }
+
+    .flex{
+        border: 3px solid black; /*the border is to show the actual border of the container*/
+        margin: 30px;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: flex-start; /*flex-start will start the boxes all the way at the beginning left and then wrap them.  You will have to removing padding or else it will start at the padding. You can also do flex-end and they will start at the right and go left. There is also space-between which is good for navbar spacing and space-around*/
+        padding: 0px; /*this helps to make the pictures more centered and balanced if the screen size gets manipulated*/
+        /* flex-direction: column-reverse and row reverse will change the order of your boxes via column or row */
+    }
+    
+    .contact-box {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* form input {
+        display: block;
+        margin: 30px;
+    }
+
+    form textarea {
+        display: block;
+        margin: 30px;
+    }
+
+    form button {
+        display: block;
+        margin: 30px;
+    } */
+
+ 
+
+    form input, textarea, button {
+        display: block;
+        margin: 30px;
+    }
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(5, [col] 20% ) ; /*if making that last number a % of the box column things it will be responsive and adjust to the screen size */
+        grid-template-rows: repeat(3, [row] auto  );
+        background-color: white;
+        color: #444;
+      }
+    
+      .BOX {
+        background-color: white;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+        z-index:10;
+    
+      }
+    
+      .a {
+        grid-column: col / span  2;
+        grid-row: row ;
+        display:flex; /*added later steps in css grid*/
+        justify-content: center; /*added later steps in css grid*/
+      }
+      .b {
+        grid-column: col 4 / span  2;
+        grid-row: row ;
+        display:flex; /*added later steps in css grid*/
+        justify-content: center; /*added later steps in css grid*/
+      }
+      .c {
+        grid-column: col / span 5;
+        grid-row: row 2 ;
+        display:flex; /*added later steps in css grid*/
+        justify-content: center; /*added later steps in css grid*/
+        background-image: linear-gradient(orange, yellow);
+      }
+      .d {
+        grid-column: col  / span  3 ;
+        grid-row: row 3 ;
+        display:flex; /*added later steps in css grid*/
+        justify-content: center; /*added later steps in css grid*/
+      }
+    
+      .e {
+        grid-column: col 3 / span  3;
+        grid-row: row 3;
+        display:flex; /*added later steps in css grid*/
+        justify-content: center; /*added later steps in css grid*/
+      }
+    
+      .f {
+        grid-column: col 2 / span 3;
+        grid-row: row 2  ;
+        background-color: rgba(49,121,207, 0.5);
+        z-index: 20;
+        display:flex; /*added later steps in css grid*/
+        justify-content: center; /*added later steps in css grid*/
+        background-image: linear-gradient(orange, red);
+      }
