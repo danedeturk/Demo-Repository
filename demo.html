@@ -46,7 +46,8 @@
       </form>
     </div> 
     <div class="row">
-      <form class="col s12">
+      <form name="demo" method="POST" data-netlify="true"class="col s12"> <!---Original = <form class="col s12"> -->
+        <input type="hidden" name="form-name" value="contact" /> <!--this is added from top-->
         <div class="row">
           <div class="input-field col s12">
           <i class="material-icons prefix">mode_edit</i>
